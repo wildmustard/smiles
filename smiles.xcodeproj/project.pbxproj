@@ -8,20 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		B0A971851C7FC4AE003988FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A971841C7FC4AE003988FE /* AppDelegate.swift */; };
-		B0A971871C7FC4AE003988FE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A971861C7FC4AE003988FE /* ViewController.swift */; };
 		B0A9718A1C7FC4AE003988FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0A971881C7FC4AE003988FE /* Main.storyboard */; };
 		B0A9718C1C7FC4AE003988FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0A9718B1C7FC4AE003988FE /* Assets.xcassets */; };
 		B0A9718F1C7FC4AE003988FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0A9718D1C7FC4AE003988FE /* LaunchScreen.storyboard */; };
+		FA1155451C7FC7E5005FB30E /* SmileSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1155441C7FC7E5005FB30E /* SmileSelectViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B0A971811C7FC4AE003988FE /* smiles.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = smiles.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0A971841C7FC4AE003988FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B0A971861C7FC4AE003988FE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B0A971891C7FC4AE003988FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B0A9718B1C7FC4AE003988FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B0A9718E1C7FC4AE003988FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B0A971901C7FC4AE003988FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA1155441C7FC7E5005FB30E /* SmileSelectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmileSelectViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,11 +55,11 @@
 			isa = PBXGroup;
 			children = (
 				B0A971841C7FC4AE003988FE /* AppDelegate.swift */,
-				B0A971861C7FC4AE003988FE /* ViewController.swift */,
 				B0A971881C7FC4AE003988FE /* Main.storyboard */,
 				B0A9718B1C7FC4AE003988FE /* Assets.xcassets */,
 				B0A9718D1C7FC4AE003988FE /* LaunchScreen.storyboard */,
 				B0A971901C7FC4AE003988FE /* Info.plist */,
+				FA1155441C7FC7E5005FB30E /* SmileSelectViewController.swift */,
 			);
 			path = smiles;
 			sourceTree = "<group>";
@@ -136,8 +136,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B0A971871C7FC4AE003988FE /* ViewController.swift in Sources */,
 				B0A971851C7FC4AE003988FE /* AppDelegate.swift in Sources */,
+				FA1155451C7FC7E5005FB30E /* SmileSelectViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +287,7 @@
 				B0A971951C7FC4AE003988FE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
