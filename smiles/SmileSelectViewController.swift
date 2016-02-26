@@ -15,10 +15,16 @@ class SmileSelectViewController: UIViewController {
     
     // Variables
     var trayOriginalCenter: CGPoint!
+    var trayCenterWhenOpen: CGPoint!
+    var trayCenterWhenClosed: CGPoint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        trayCenterWhenOpen = trayView.center
+        trayCenterWhenClosed = trayView.center
+        trayCenterWhenClosed.y = trayCenterWhenClosed.y + 178
+        
+        trayView.center = trayCenterWhenClosed
         // Do any additional setup after loading the view.
     }
 
@@ -47,7 +53,22 @@ class SmileSelectViewController: UIViewController {
         } else if panGestureRecognizer.state == UIGestureRecognizerState.Changed {
             
             print("Gesture changed at: \(point)")
-            self.trayView.center = CGPoint(x: trayOriginalCenter.x, y: trayOriginalCenter.y + translation.y)
+            if panGestureRecognizer.velocityInView(self.trayView).y > 0 {
+                UIView.animateWithDuration(0.5, delay: 0, usingSpringWithDamping: 0.75, initialSpringVelocity: 0.2, options: .AllowUserInteraction, animations: { () -> Void in
+                    self.trayView.center = self.trayCenterWhenClosed
+                    }, completion: { (Bool) -> Void in
+                        //print("yay")
+                })
+            
+                
+            } else if panGestureRecognizer.velocityInView(self.trayView).y < 0 {
+                UIView.animateWithDuration(0.5, delay: 0, usingSpringWithDamping: 0.75, initialSpringVelocity: 0.2, options: .AllowUserInteraction, animations: { () -> Void in
+                    self.trayView.center = self.trayCenterWhenOpen
+                    }, completion: { (Bool) -> Void in
+                        //print("yay")
+                })
+
+            }
             
         } else if panGestureRecognizer.state == UIGestureRecognizerState.Ended {
             
@@ -58,6 +79,22 @@ class SmileSelectViewController: UIViewController {
         
     }
     
+    @IBAction func onTrayTapGesture(sender: UITapGestureRecognizer) {
+        if self.trayView.center == trayCenterWhenClosed {
+            UIView.animateWithDuration(0.5, delay: 0, usingSpringWithDamping: 0.75, initialSpringVelocity: 0.2, options: .AllowUserInteraction, animations: { () -> Void in
+                self.trayView.center = self.trayCenterWhenOpen
+                }, completion: { (Bool) -> Void in
+                    //print("yay")
+            })
+        }
+        else if self.trayView.center == trayCenterWhenOpen {
+            UIView.animateWithDuration(0.5, delay: 0, usingSpringWithDamping: 0.75, initialSpringVelocity: 0.2, options: .AllowUserInteraction, animations: { () -> Void in
+                self.trayView.center = self.trayCenterWhenClosed
+                }, completion: { (Bool) -> Void in
+                    //print("yay")
+            })
+        }
+    }
     
     /*
     // MARK: - Navigation

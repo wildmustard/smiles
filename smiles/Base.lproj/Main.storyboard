@@ -29,10 +29,6 @@
                                         <rect key="frame" x="226" y="47" width="65" height="65"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="down_arrow" id="NzW-XO-VeI">
-                                        <rect key="frame" x="128" y="8" width="65" height="31"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sad" id="nhv-se-0nI">
                                         <rect key="frame" x="28" y="131" width="65" height="65"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -45,11 +41,17 @@
                                         <rect key="frame" x="129" y="131" width="65" height="65"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="down_arrow" id="NzW-XO-VeI">
+                                        <rect key="frame" x="143" y="14" width="35" height="17"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <gestureRecognizers/>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" name="quaternaryLabelColor" catalog="System" colorSpace="catalog"/>
                                 <gestureRecognizers/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="wAX-vB-a01" appends="YES" id="oHm-3V-bwF"/>
+                                    <outletCollection property="gestureRecognizers" destination="Lz7-Uq-c4H" appends="YES" id="BoQ-G0-wR6"/>
                                 </connections>
                             </view>
                         </subviews>
@@ -65,6 +67,11 @@
                         <action selector="onTrayPanGesture:" destination="BYZ-38-t0r" id="lyi-ow-0yL"/>
                     </connections>
                 </panGestureRecognizer>
+                <tapGestureRecognizer id="Lz7-Uq-c4H">
+                    <connections>
+                        <action selector="onTrayTapGesture:" destination="BYZ-38-t0r" id="IjL-iC-QqX"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="173" y="366"/>
         </scene>
